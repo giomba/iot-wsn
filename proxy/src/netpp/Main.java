@@ -1,6 +1,8 @@
 package netpp;
 
-import java.util.*;
+import java.util.ArrayList;
+
+import org.eclipse.californium.core.CoapServer;
 
 public class Main {
 	public final static String COOJA_MAGIC = "c30c";
@@ -31,9 +33,16 @@ public class Main {
 		for (int i = 2; i <= n; i++) {	// node 1 is the gateway, skip. And mind the <=
 			String uri_string = "coap://[" + prefix + ":" + COOJA_MAGIC + "::" + Integer.toString(i, 16) + "]" + resource;
 			System.err.println("[I] subscribing to " + uri_string);
-			nodeList.add(new Node(uri_string));
+			nodeList.add(new Node(i, uri_string));
 		}
 		
+		/* run server */
+		CoapServer server = new CoapServer();
+		for (Node node : nodeList) {
+			server.add(node.getResource());
+		}
+		server.start();
+		System.err.println("[D] server started");		
 		
 		/* thread sleep */
 		try {
