@@ -1,8 +1,10 @@
 package netpp;
 
+import java.util.*;
+
 public class Main {
 	public final static String COOJA_MAGIC = "c30c";
-	public final static String resource = "/test/myresource";
+	public final static String resource = "/PreciousResource";
 	
 	public static void main(String[] args) {
 		if (args.length < 2) {
@@ -17,22 +19,32 @@ public class Main {
 			System.exit(1);
 		}
 		
+		/* getting parameters from CLI */
 		final String prefix = args[0];
 		final int n = Integer.parseInt(args[1]);
+		
+		/* subscribe to every node specified */
 		System.err.println("[I] now subscribing to node [2; " + n + "] in " + prefix + "/64");
 		
-		/* subscribe to every node */
+		ArrayList<Node> nodeList = new ArrayList<Node>();
+		
 		for (int i = 2; i <= n; i++) {	// node 1 is the gateway, skip. And mind the <=
 			String uri_string = "coap://[" + prefix + ":" + COOJA_MAGIC + "::" + Integer.toString(i, 16) + "]" + resource;
 			System.err.println("[I] subscribing to " + uri_string);
-			Node node = new Node(uri_string);
+			nodeList.add(new Node(uri_string));
 		}
 		
 		
+		/* thread sleep */
 		try {
 			Thread.sleep(5 * 60 * 1000);	// 5 min
 		} catch (InterruptedException ex) {
 			System.err.println(ex);
+		}
+		
+		/* shutting down everything */
+		for (Node node : nodeList) {
+			node.finalize();
 		}
 		
 	}

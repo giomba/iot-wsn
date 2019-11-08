@@ -189,7 +189,7 @@
       <viewport>8.441705440311774 0.0 0.0 8.441705440311774 -46.28112185124378 27.204467518174773</viewport>
     </plugin_config>
     <width>678</width>
-    <z>2</z>
+    <z>3</z>
     <height>633</height>
     <location_x>1</location_x>
     <location_y>1</location_y>
@@ -202,7 +202,7 @@
       <coloring />
     </plugin_config>
     <width>1039</width>
-    <z>3</z>
+    <z>1</z>
     <height>475</height>
     <location_x>681</location_x>
     <location_y>160</location_y>
@@ -247,7 +247,7 @@
       <bound>true</bound>
     </plugin_config>
     <width>362</width>
-    <z>1</z>
+    <z>2</z>
     <height>116</height>
     <location_x>992</location_x>
     <location_y>662</location_y>

@@ -6,14 +6,17 @@
 #include "net/ip/uip-debug.h"
 
 int precious_resource = 0;
+char sensor_name[32];    /* for RFC8428 */
 
 /* handlers for coap */
 void res_get_handler(void* request, void* response, uint8_t* buffer, uint16_t preferred_size, int32_t* offset) {
-    static char payload[16];
-    sprintf(payload, "pr = %d", precious_resource);
+    static char payload[128];
+    sprintf(payload, "[{\"n\":\"urn:it.unipi.ing.ce.netpp:%s\",\"v\":%d}]", sensor_name, precious_resource);
 
     REST.set_header_content_type(response, REST.type.TEXT_PLAIN);
     REST.set_response_payload(response, payload, strlen(payload));
+
+    printf("[D] GET handled\n");
 }
 
 void res_periodic_handler();
@@ -25,6 +28,7 @@ void res_periodic_handler() {
     /* sample some sensor */
     /* byte mysample = *(some_bar + some_offset); */
     ++precious_resource;
+    printf("sampled the precious resource: %d\n", precious_resource);
 
     /* Notify subscribers of the new sample */
     REST.notify_subscribers(&myresource);
@@ -48,10 +52,15 @@ PROCESS_THREAD(main_process_name, ev, data) {
             printf("\n");
         }
     }
+    /* set sensor_name as mac address */
+    for (i = 0; i < sizeof(uip_lladdr.addr); ++i) {
+        sprintf(sensor_name + i, "%02x", (unsigned char)uip_lladdr.addr[i]);
+    }
+
 
     /* enable CoAP engine */
     rest_init_engine();
-    rest_activate_resource(&myresource, "test/myresource");
+    rest_activate_resource(&myresource, "PreciousResource");
 
     while (1) {
             PROCESS_WAIT_EVENT();
