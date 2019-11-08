@@ -10,7 +10,7 @@ public class Main {
 			System.err.println("Usage: ");
 			System.err.println("$ exe <prefix> <n>");
 			System.err.println("	prefix	IPv6 /64 prefix (mind the format!)");
-			System.err.println("	n		number of nodes");
+			System.err.println("	n		last node number (dec)");
 			System.err.println();
 			System.err.println("Example:");
 			System.err.println("$ exe 2001:db8:0:0 10");
@@ -21,10 +21,9 @@ public class Main {
 		final int n = Integer.parseInt(args[1]);
 		System.err.println("[I] now subscribing to node [2; " + n + "] in " + prefix + "/64");
 		
-		// TODO pay attention to this for-cycle and mind the hexadecimal values!
 		/* subscribe to every node */
 		for (int i = 2; i <= n; i++) {	// node 1 is the gateway, skip. And mind the <=
-			String uri_string = "coap://[" + prefix + ":" + COOJA_MAGIC + "::" + Integer.toString(i) + "]" + resource;
+			String uri_string = "coap://[" + prefix + ":" + COOJA_MAGIC + "::" + Integer.toString(i, 16) + "]" + resource;
 			System.err.println("[I] subscribing to " + uri_string);
 			Node node = new Node(uri_string);
 		}
