@@ -1,5 +1,11 @@
 package netpp;
 
+import java.io.ByteArrayOutputStream;
+
+import javax.json.Json;
+import javax.json.JsonArray;
+import javax.json.JsonWriter;
+
 import org.eclipse.californium.core.CoapResource;
 import org.eclipse.californium.core.server.resources.CoapExchange;
 
@@ -15,7 +21,18 @@ public class Resource extends CoapResource {
 	
 	public void handleGET(CoapExchange exchange) {
 		// TODO build the proper JSON object
-		exchange.respond("TODO: " + this.getName() + " : " + this.getValue());
+		JsonArray senml = Json.createArrayBuilder()
+			.add(
+				Json.createObjectBuilder()
+					.add("n", this.getName())
+					.add("v", this.getValue())
+					.build()
+			).build();
+
+		ByteArrayOutputStream bos = new ByteArrayOutputStream();
+		JsonWriter writer = Json.createWriter(bos);
+		writer.writeArray(senml);
+		exchange.respond(bos.toString());
 	}
 	
 	public int getValue() {
