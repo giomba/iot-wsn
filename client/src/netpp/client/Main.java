@@ -35,6 +35,10 @@ public class Main {
 		CoapResponse response = null;
 		try {
 			response = client.get();
+			if (!response.isSuccess()) {
+				System.err.println("[E] can not access resource");
+				System.exit(1);
+			}
 		} catch (ConnectorException | IOException e) {
 			e.printStackTrace();
 			System.exit(1);
