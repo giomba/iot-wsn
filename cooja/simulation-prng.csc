@@ -638,7 +638,7 @@
       <viewport>2.631613289609486 0.0 0.0 2.631613289609486 346.00912570327847 269.9189081106048</viewport>
     </plugin_config>
     <width>672</width>
-    <z>0</z>
+    <z>1</z>
     <height>609</height>
     <location_x>1</location_x>
     <location_y>1</location_y>
@@ -738,13 +738,13 @@ YIELD();
 WAIT_UNTIL(id == 1 &amp;&amp; msg.equals("detected 30"));
 
 // log.log("[ANAWS] ROUTE-DISCOVERY AT " + String(time) + "\n");
-log.log("[ANAWS] ALL-ROUTE-DISCOVERY  " + sim.getSimulationTime() + " [us]\n");
+log.log("ALL-ROUTE-DISCOVERY  " + sim.getSimulationTime() + " [us]\n");
 
 log.testOK();</script>
       <active>false</active>
     </plugin_config>
     <width>600</width>
-    <z>1</z>
+    <z>0</z>
     <height>700</height>
     <location_x>958</location_x>
     <location_y>39</location_y>
