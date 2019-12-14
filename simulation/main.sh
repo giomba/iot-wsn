@@ -10,7 +10,7 @@ mkdir -p "$REPOSITORY/simulation/results"
 
 # Setup simulation parameters
 for KAPPA in 10 7 5 3 2 1; do
-    for I_MIN in 12 14 16 18 20; do
+    for I_MIN in 12 14 16 18; do
         I_MAX=$((20 - I_MIN))   # 20 =~ 17 minutes
 
         for PROJECTCONF in "$REPOSITORY/oracle/project-conf.h" "$CONTIKI/examples/ipv6/rpl-border-router/project-conf.h"; do
