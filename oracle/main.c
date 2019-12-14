@@ -22,7 +22,7 @@ void res_get_handler(void* request, void* response, uint8_t* buffer, uint16_t pr
 void res_periodic_handler();
 
 /* declare resource and set handlers */
-PERIODIC_RESOURCE(myresource, "title=\"An observable resource\";rt=\"some descriptive text\";obs", res_get_handler, NULL, NULL, NULL, 10 * CLOCK_SECOND, res_periodic_handler);
+PERIODIC_RESOURCE(myresource, "title=\"An observable resource\";rt=\"some descriptive text\";obs", res_get_handler, NULL, NULL, NULL, 60 * CLOCK_SECOND, res_periodic_handler);
 
 void res_periodic_handler() {
     /* sample some sensor */
