@@ -3,15 +3,15 @@
 REPOSITORY=$(pwd)
 CONTIKI=/home/giomba/workspace/uni/contiki/
 SIMULATION=/home/giomba/workspace/uni/anaws-proj/cooja/simulation-prng.csc
-REPEAT=10
+REPEAT=20
 
 # Setup environment
 mkdir -p "$REPOSITORY/simulation/results"
 
 # Setup simulation parameters
-for KAPPA in 10 7 5 3 2 1; do
-    for I_MIN in 12 14 16 18; do
-        I_MAX=$((20 - I_MIN))   # 20 =~ 17 minutes
+for KAPPA in 5; do
+    for I_MIN in 20 18 16; do
+        I_MAX=$((22 - I_MIN))   # 22 =~ 70 minutes
 
         for PROJECTCONF in "$REPOSITORY/oracle/project-conf.h" "$CONTIKI/examples/ipv6/rpl-border-router/project-conf.h"; do
             sed -i "s/^\#define RPL_CONF_DIO_REDUNDANCY *[0-9]*$/\#define RPL_CONF_DIO_REDUNDANCY $KAPPA/g" "$PROJECTCONF"

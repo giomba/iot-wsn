@@ -4,7 +4,7 @@ import numpy as numpy
 import pandas as pd
 
 def getcolor(n):
-    return ['#aa0000', '#00aa00', '#0000aa', '#aaaa00'][int((i - 12) / 2)]
+    return ['#aa0000', '#00aa00', '#0000aa', '#aaaa00', '#aa00aa'][int((i - 12) / 2)]
 
 df = pd.read_csv('pretty.csv', delimiter='\s', engine='python')
 
