@@ -7,8 +7,8 @@
   <project EXPORT="discard">[APPS_DIR]/collect-view</project>
   <project EXPORT="discard">[APPS_DIR]/powertracker</project>
   <simulation>
-    <title>TheMatrix</title>
-    <randomseed>123456</randomseed>
+    <title>My simulation</title>
+    <randomseed>generated</randomseed>
     <motedelay_us>1000000</motedelay_us>
     <radiomedium>
       org.contikios.cooja.radiomediums.UDGM
@@ -64,8 +64,8 @@
       <breakpoints />
       <interface_config>
         org.contikios.cooja.interfaces.Position
-        <x>86.13444974265813</x>
-        <y>69.90280107817652</y>
+        <x>2.8401240027287944</x>
+        <y>20.180398464401506</y>
         <z>0.0</z>
       </interface_config>
       <interface_config>
@@ -82,8 +82,8 @@
       <breakpoints />
       <interface_config>
         org.contikios.cooja.interfaces.Position
-        <x>51.52627033556432</x>
-        <y>156.50687058384247</y>
+        <x>62.70457624916895</x>
+        <y>5.461823348621493</y>
         <z>0.0</z>
       </interface_config>
       <interface_config>
@@ -100,8 +100,8 @@
       <breakpoints />
       <interface_config>
         org.contikios.cooja.interfaces.Position
-        <x>135.46626460917662</x>
-        <y>175.0121677245167</y>
+        <x>-42.50529195002628</x>
+        <y>95.99347517915606</y>
         <z>0.0</z>
       </interface_config>
       <interface_config>
@@ -118,8 +118,8 @@
       <breakpoints />
       <interface_config>
         org.contikios.cooja.interfaces.Position
-        <x>42.826166715568235</x>
-        <y>131.42320868067324</y>
+        <x>-64.0342030412418</x>
+        <y>-76.45182374542104</y>
         <z>0.0</z>
       </interface_config>
       <interface_config>
@@ -136,8 +136,8 @@
       <breakpoints />
       <interface_config>
         org.contikios.cooja.interfaces.Position
-        <x>187.05667809684172</x>
-        <y>169.3188559183185</y>
+        <x>26.546391605398625</x>
+        <y>-59.30002353310728</y>
         <z>0.0</z>
       </interface_config>
       <interface_config>
@@ -154,8 +154,8 @@
       <breakpoints />
       <interface_config>
         org.contikios.cooja.interfaces.Position
-        <x>32.82891907363539</x>
-        <y>15.516635561430592</y>
+        <x>-84.85459248648142</x>
+        <y>98.55316515771543</y>
         <z>0.0</z>
       </interface_config>
       <interface_config>
@@ -172,8 +172,8 @@
       <breakpoints />
       <interface_config>
         org.contikios.cooja.interfaces.Position
-        <x>53.227886077285106</x>
-        <y>56.65074004214692</y>
+        <x>73.08943636820524</x>
+        <y>-36.58257187319245</y>
         <z>0.0</z>
       </interface_config>
       <interface_config>
@@ -190,8 +190,8 @@
       <breakpoints />
       <interface_config>
         org.contikios.cooja.interfaces.Position
-        <x>9.478776977357972</x>
-        <y>141.6872676748177</y>
+        <x>-98.8057360093751</x>
+        <y>-73.06961837300403</y>
         <z>0.0</z>
       </interface_config>
       <interface_config>
@@ -208,8 +208,8 @@
       <breakpoints />
       <interface_config>
         org.contikios.cooja.interfaces.Position
-        <x>121.3216653175472</x>
-        <y>79.12780506658024</y>
+        <x>23.471662544709446</x>
+        <y>53.225517361008684</y>
         <z>0.0</z>
       </interface_config>
       <interface_config>
@@ -226,8 +226,8 @@
       <breakpoints />
       <interface_config>
         org.contikios.cooja.interfaces.Position
-        <x>140.4274166445628</x>
-        <y>48.19411557315654</y>
+        <x>-13.565530041615915</x>
+        <y>-80.11928625014107</y>
         <z>0.0</z>
       </interface_config>
       <interface_config>
@@ -244,8 +244,8 @@
       <breakpoints />
       <interface_config>
         org.contikios.cooja.interfaces.Position
-        <x>141.8774935790525</x>
-        <y>118.01947990974314</y>
+        <x>-34.51438626745433</x>
+        <y>-81.09816665820632</y>
         <z>0.0</z>
       </interface_config>
       <interface_config>
@@ -262,8 +262,8 @@
       <breakpoints />
       <interface_config>
         org.contikios.cooja.interfaces.Position
-        <x>167.54133708401406</x>
-        <y>141.62452988655903</y>
+        <x>71.70626744929694</x>
+        <y>-46.85016956041235</y>
         <z>0.0</z>
       </interface_config>
       <interface_config>
@@ -280,8 +280,8 @@
       <breakpoints />
       <interface_config>
         org.contikios.cooja.interfaces.Position
-        <x>182.19925638559323</x>
-        <y>45.94414109294538</y>
+        <x>-41.520309705555846</x>
+        <y>71.44077281376488</y>
         <z>0.0</z>
       </interface_config>
       <interface_config>
@@ -298,8 +298,8 @@
       <breakpoints />
       <interface_config>
         org.contikios.cooja.interfaces.Position
-        <x>94.23114956779912</x>
-        <y>7.372914932476138</y>
+        <x>43.08727383704024</x>
+        <y>69.28339212423197</y>
         <z>0.0</z>
       </interface_config>
       <interface_config>
@@ -316,8 +316,8 @@
       <breakpoints />
       <interface_config>
         org.contikios.cooja.interfaces.Position
-        <x>28.4351017753266</x>
-        <y>54.086725788078674</y>
+        <x>1.1574329431798276</x>
+        <y>-10.80591664080768</y>
         <z>0.0</z>
       </interface_config>
       <interface_config>
@@ -334,8 +334,8 @@
       <breakpoints />
       <interface_config>
         org.contikios.cooja.interfaces.Position
-        <x>194.99716411863673</x>
-        <y>74.93216287863017</y>
+        <x>86.63895925194797</x>
+        <y>16.352747256872362</y>
         <z>0.0</z>
       </interface_config>
       <interface_config>
@@ -352,8 +352,8 @@
       <breakpoints />
       <interface_config>
         org.contikios.cooja.interfaces.Position
-        <x>34.692590848066104</x>
-        <y>97.96844103802013</y>
+        <x>70.93169772866406</x>
+        <y>20.543994795105263</y>
         <z>0.0</z>
       </interface_config>
       <interface_config>
@@ -370,8 +370,8 @@
       <breakpoints />
       <interface_config>
         org.contikios.cooja.interfaces.Position
-        <x>12.575336165029904</x>
-        <y>17.556879953372338</y>
+        <x>39.091328725160054</x>
+        <y>55.941084547841</y>
         <z>0.0</z>
       </interface_config>
       <interface_config>
@@ -388,8 +388,8 @@
       <breakpoints />
       <interface_config>
         org.contikios.cooja.interfaces.Position
-        <x>188.5841996502633</x>
-        <y>116.89735135147325</y>
+        <x>16.453276006224286</x>
+        <y>-59.66650954910484</y>
         <z>0.0</z>
       </interface_config>
       <interface_config>
@@ -406,8 +406,8 @@
       <breakpoints />
       <interface_config>
         org.contikios.cooja.interfaces.Position
-        <x>133.43709588605824</x>
-        <y>38.25370176148881</y>
+        <x>-4.390747291039673</x>
+        <y>87.26687348716987</y>
         <z>0.0</z>
       </interface_config>
       <interface_config>
@@ -424,8 +424,8 @@
       <breakpoints />
       <interface_config>
         org.contikios.cooja.interfaces.Position
-        <x>78.76068226918665</x>
-        <y>28.22809372316739</y>
+        <x>-91.67228068349867</x>
+        <y>-31.508149118910467</y>
         <z>0.0</z>
       </interface_config>
       <interface_config>
@@ -442,8 +442,8 @@
       <breakpoints />
       <interface_config>
         org.contikios.cooja.interfaces.Position
-        <x>150.08742374085077</x>
-        <y>70.09703322226797</y>
+        <x>53.98786953015234</x>
+        <y>-66.86616338929652</y>
         <z>0.0</z>
       </interface_config>
       <interface_config>
@@ -460,8 +460,8 @@
       <breakpoints />
       <interface_config>
         org.contikios.cooja.interfaces.Position
-        <x>48.63056610039707</x>
-        <y>36.08069318062117</y>
+        <x>30.80831962466192</x>
+        <y>51.80268003334382</y>
         <z>0.0</z>
       </interface_config>
       <interface_config>
@@ -478,8 +478,8 @@
       <breakpoints />
       <interface_config>
         org.contikios.cooja.interfaces.Position
-        <x>95.60417975572267</x>
-        <y>155.21342903799032</y>
+        <x>81.0646699044992</x>
+        <y>-79.55330040239726</y>
         <z>0.0</z>
       </interface_config>
       <interface_config>
@@ -496,8 +496,8 @@
       <breakpoints />
       <interface_config>
         org.contikios.cooja.interfaces.Position
-        <x>1.4443131618000926</x>
-        <y>22.60341764850282</y>
+        <x>-29.078011851630833</x>
+        <y>53.4674864072434</y>
         <z>0.0</z>
       </interface_config>
       <interface_config>
@@ -514,8 +514,8 @@
       <breakpoints />
       <interface_config>
         org.contikios.cooja.interfaces.Position
-        <x>145.97717601565432</x>
-        <y>28.754329514574174</y>
+        <x>-18.275675734835886</x>
+        <y>30.46886342152942</y>
         <z>0.0</z>
       </interface_config>
       <interface_config>
@@ -532,8 +532,8 @@
       <breakpoints />
       <interface_config>
         org.contikios.cooja.interfaces.Position
-        <x>107.17179210686996</x>
-        <y>41.995577152348964</y>
+        <x>81.7369940927974</x>
+        <y>33.90815409313575</y>
         <z>0.0</z>
       </interface_config>
       <interface_config>
@@ -550,8 +550,8 @@
       <breakpoints />
       <interface_config>
         org.contikios.cooja.interfaces.Position
-        <x>79.75285371214716</x>
-        <y>141.10964790096108</y>
+        <x>30.75563686385422</x>
+        <y>55.40035529973554</y>
         <z>0.0</z>
       </interface_config>
       <interface_config>
@@ -568,8 +568,8 @@
       <breakpoints />
       <interface_config>
         org.contikios.cooja.interfaces.Position
-        <x>10.011740148116122</x>
-        <y>5.5755307926002695</y>
+        <x>-38.71906313508564</x>
+        <y>88.66374116285508</y>
         <z>0.0</z>
       </interface_config>
       <interface_config>
@@ -586,8 +586,8 @@
       <breakpoints />
       <interface_config>
         org.contikios.cooja.interfaces.Position
-        <x>16.516397756095703</x>
-        <y>100.66328458096703</y>
+        <x>16.30310917244114</x>
+        <y>14.567282002160084</y>
         <z>0.0</z>
       </interface_config>
       <interface_config>
@@ -604,8 +604,8 @@
       <breakpoints />
       <interface_config>
         org.contikios.cooja.interfaces.Position
-        <x>103.78274003802443</x>
-        <y>83.492664972201</y>
+        <x>-7.756304235356026</x>
+        <y>39.799774604890644</y>
         <z>0.0</z>
       </interface_config>
       <interface_config>
@@ -622,10 +622,10 @@
   <plugin>
     org.contikios.cooja.plugins.SimControl
     <width>280</width>
-    <z>1</z>
+    <z>3</z>
     <height>160</height>
-    <location_x>4</location_x>
-    <location_y>651</location_y>
+    <location_x>11</location_x>
+    <location_y>627</location_y>
   </plugin>
   <plugin>
     org.contikios.cooja.plugins.Visualizer
@@ -635,11 +635,11 @@
       <skin>org.contikios.cooja.plugins.skins.GridVisualizerSkin</skin>
       <skin>org.contikios.cooja.plugins.skins.TrafficVisualizerSkin</skin>
       <skin>org.contikios.cooja.plugins.skins.UDGMVisualizerSkin</skin>
-      <viewport>4.363597628395609 0.0 0.0 4.363597628395609 -112.84186218972216 -81.59855112545544</viewport>
+      <viewport>2.631613289609486 0.0 0.0 2.631613289609486 346.00912570327847 269.9189081106048</viewport>
     </plugin_config>
-    <width>667</width>
-    <z>2</z>
-    <height>644</height>
+    <width>672</width>
+    <z>1</z>
+    <height>609</height>
     <location_x>1</location_x>
     <location_y>1</location_y>
   </plugin>
@@ -650,11 +650,11 @@
       <formatted_time />
       <coloring />
     </plugin_config>
-    <width>1041</width>
-    <z>5</z>
-    <height>460</height>
-    <location_x>679</location_x>
-    <location_y>2</location_y>
+    <width>1040</width>
+    <z>4</z>
+    <height>436</height>
+    <location_x>677</location_x>
+    <location_y>374</location_y>
   </plugin>
   <plugin>
     org.contikios.cooja.plugins.TimeLine
@@ -709,36 +709,36 @@
       <bound>false</bound>
     </plugin_config>
     <width>362</width>
-    <z>3</z>
+    <z>2</z>
     <height>116</height>
-    <location_x>287</location_x>
-    <location_y>698</location_y>
+    <location_x>301</location_x>
+    <location_y>654</location_y>
   </plugin>
   <plugin>
     org.contikios.cooja.plugins.RadioLogger
     <plugin_config>
-      <split>213</split>
+      <split>150</split>
       <formatted_time />
       <showdups>false</showdups>
       <hidenodests>false</hidenodests>
     </plugin_config>
-    <width>1052</width>
-    <z>4</z>
-    <height>357</height>
-    <location_x>667</location_x>
-    <location_y>462</location_y>
+    <width>1037</width>
+    <z>5</z>
+    <height>366</height>
+    <location_x>677</location_x>
+    <location_y>3</location_y>
   </plugin>
   <plugin>
     org.contikios.cooja.plugins.ScriptRunner
     <plugin_config>
-      <script>TIMEOUT(200000, log.log("TIMEOUT"));
+      <script>TIMEOUT(3600000, log.log("TIMEOUT")); // that is 60 minutes
 
-YIELD(); 
+YIELD();
 
 WAIT_UNTIL(id == 1 &amp;&amp; msg.equals("detected 30"));
 
 // log.log("[ANAWS] ROUTE-DISCOVERY AT " + String(time) + "\n");
-log.log("[ANAWS] ALL-ROUTE-DISCOVERY  " + sim.getSimulationTime() + " [us]\n");
+log.log("ALL-ROUTE-DISCOVERY  " + sim.getSimulationTime() + " [us]\n");
 
 log.testOK();</script>
       <active>false</active>
@@ -746,8 +746,8 @@ log.testOK();</script>
     <width>600</width>
     <z>0</z>
     <height>700</height>
-    <location_x>176</location_x>
-    <location_y>121</location_y>
+    <location_x>958</location_x>
+    <location_y>39</location_y>
   </plugin>
 </simconf>
 
