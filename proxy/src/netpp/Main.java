@@ -25,6 +25,11 @@ public class Main {
 		final String prefix = args[0];
 		final int n = Integer.parseInt(args[1]);
 		
+		/* run server */
+		CoapServer server = new CoapServer();
+		server.start();
+		System.err.println("[D] server started");
+		
 		/* subscribe to every node specified */
 		System.err.println("[I] now subscribing to node [2; " + n + "] in " + prefix + "/64");
 		
@@ -33,27 +38,40 @@ public class Main {
 		for (int i = 2; i <= n; i++) {	// node 1 is the gateway, skip. And mind the <=
 			String uri_string = "coap://[" + prefix + ":" + COOJA_MAGIC + "::" + Integer.toString(i, 16) + "]" + resource;
 			System.err.println("[I] subscribing to " + uri_string);
-			nodeList.add(new Node(i, uri_string));
-		}
-		
-		/* run server */
-		CoapServer server = new CoapServer();
-		for (Node node : nodeList) {
+			
+			Node node = new Node(i, uri_string);
+			nodeList.add(node);
 			server.add(node.getResource());
 		}
-		server.start();
-		System.err.println("[D] server started");		
 		
-		/* thread sleep */
-		try {
-			Thread.sleep(5 * 60 * 1000);	// 5 min
-		} catch (InterruptedException ex) {
-			System.err.println(ex);
-		}
-		
-		/* shutting down everything */
-		for (Node node : nodeList) {
-			node.finalize();
+		/* periodically check for offline nodes */
+		while (true) {
+			System.err.println("[D] check for offline nodes...");
+			Node offline_node = null;
+			
+			for (Node node : nodeList) {
+				if (node.getStatus() == Status.OFFLINE) {
+					System.err.println("[I] detected offline node");
+					offline_node = node;
+					break;
+				}
+			}
+			
+			if (offline_node != null) {
+				System.err.println("[I] tryng again to contact " + offline_node.getURI());
+				nodeList.remove(offline_node);
+				server.remove(offline_node.getResource());
+				
+				Node new_node = new Node(0, offline_node.getURI().toString());
+				nodeList.add(new_node);
+				server.add(new_node.getResource());
+			}
+			/* thread sleep */
+			try {
+				Thread.sleep(5 * 1000);	// 5 sec
+			} catch (InterruptedException ex) {
+				System.err.println(ex);
+			}
 		}
 		
 	}

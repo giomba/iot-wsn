@@ -2,7 +2,6 @@ package netpp;
 
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
-import java.net.URI;
 import java.util.Date;
 
 import javax.json.Json;
@@ -15,19 +14,20 @@ import org.eclipse.californium.core.CoapResponse;
 
 public class Handler implements CoapHandler {
 	
-	private URI uri;
-	private Resource resource;
+	private Node node;
 	
-	public Handler(URI uri, Resource resource) {
-		this.uri = uri;
-		this.resource = resource;
-		System.err.println("[D] new handler for " + this.uri);
+	public Handler(Node node) {
+		this.node = node;
+		node.setStatus(Status.WAIT);
+		System.err.println("[D] new handler for " + this.node.getURI());
 	}
 
 	@Override
 	public void onLoad(CoapResponse response) {
 		String content = response.getResponseText();
-		System.out.println("[D] from " + this.uri + " update received at " + new Date() + " > " + content);
+		System.out.println("[D] from " + this.node.getURI() + " update received at " + new Date() + " > " + content);
+		
+		this.node.setStatus(Status.ONLINE);
 		
 		JsonArray jsonSenML = null;
 		try {
@@ -41,8 +41,8 @@ public class Handler implements CoapHandler {
 			String res_name = res.getString("n");	// name of resource
 			int res_value = res.getJsonNumber("v").intValue();	// value of resource
 
-			resource.setName(res_name);
-			resource.setValue(res_value);
+			this.node.getResource().setName(res_name);
+			this.node.getResource().setValue(res_value);
 		} catch (Exception ex) {
 			ex.printStackTrace();
 			System.err.println("[E] " + ex);
@@ -51,7 +51,8 @@ public class Handler implements CoapHandler {
 
 	@Override
 	public void onError() {
-		System.err.println("[E] failed " + uri);
+		node.setStatus(Status.OFFLINE);
+		System.err.println("[E] failed " + this.node.getURI());
 	}
 
 }

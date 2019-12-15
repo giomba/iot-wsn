@@ -15,12 +15,11 @@ public class Resource extends CoapResource {
 
 	public Resource(int quickname) {
 		super(Integer.toString(quickname, 16));
-		// setObservable(true); // TODO -- do we need to make this observable?
 		System.err.println("[D] resource created: " + super.getName());
 	}
 	
 	public void handleGET(CoapExchange exchange) {
-		// TODO build the proper JSON object
+		/* an RFC8428 (SenML) compliant JSON */
 		JsonArray senml = Json.createArrayBuilder()
 			.add(
 				Json.createObjectBuilder()
