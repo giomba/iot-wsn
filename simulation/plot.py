@@ -31,6 +31,8 @@ handles = []
 for i in df['i_min'].unique():
     handles.append(mpatches.Patch(color=getcolor(i), label='Imin = ' + str(i)))
 
+plt.ylim([0, 1400])
+
 plt.legend(handles=handles)
 
 plt.show()

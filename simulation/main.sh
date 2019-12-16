@@ -3,13 +3,13 @@
 REPOSITORY=$(pwd)
 CONTIKI=/home/giomba/workspace/uni/contiki/
 SIMULATION=/home/giomba/workspace/uni/anaws-proj/cooja/simulation-prng.csc
-REPEAT=20
+REPEAT=30
 
 # Setup environment
 mkdir -p "$REPOSITORY/simulation/results"
 
 # Setup simulation parameters
-for KAPPA in 5; do
+for KAPPA in 1 2 3 4 5; do
     for I_MIN in 20 18 16; do
         I_MAX=$((22 - I_MIN))   # 22 =~ 70 minutes
 
@@ -21,6 +21,9 @@ for KAPPA in 5; do
 
         # Run simulation
         for (( i = 0; i<=$REPEAT; i++ )); do
+            cd "$REPOSITORY/cooja"
+            sed -i "s_<randomseed>.*<\\/randomseed>_<randomseed>$i<\\/randomseed>_g" simulation-prng.csc
+
             cd "$CONTIKI/tools/cooja"
             ant run_nogui -Dargs="$SIMULATION" &
 
