@@ -13,6 +13,11 @@ NetPP is a company which organizes public events and exhibitions, which installs
   * a CoAP proxy must be developed in Java using the Eclipse Californium CoAP library (_proxy_)
 
 ## Trickle parameters
+In order to satisfy the formal requirements, studies from [this paper](#tricklef) have been taken in account, thus smallest possible value for _k_ and highest possible value for _I<sub>min</sub>_ have been chosen, and in particular these have been exploited:
+* k = 1
+* I<sub>min</sub> = 2<sup>11</sup> (ms)
+
+30 independent [simulations](#simulation) have been run, and all of them let the first network DODAG form in less than 20 minutes.
 
 ## Repository organization
 * ```client```: source code for a CoAP client
@@ -60,4 +65,18 @@ Example:
 
 
 ### Simulation
-Use a simulation with a pseudo random number generator enabled, eg. ```simulation-prng.csc```.
+The ```simulation/main.sh``` can be used to run automatically several independent simulations with Cooja.
+#### Parameters
+* ```REPOSITORY``` path to this repository root directory
+* ```CONTIKI``` path to Contiki repository
+* ```SIMULATION``` path to Cooja simulation (.csc file)
+* ```REPEAT``` number of repetitions
+* ```INIT``` initial repetition number (```INIT + REPEAT``` is used as random seed)
+
+Moreover, inner ```for```s can be tuned in order to explore several combinations of _k_ and _I<sub>min</sub>_.
+
+#### Output
+Output results can be found in ```simulation/results```.
+
+## References
+<a name="tricklef">[1]</a> Vallati, Carlo & Mingozzi, Enzo. (2013). Trickle-F: Fair broadcast suppression to improve energy-efficient route formation with the RPL routing protocol
