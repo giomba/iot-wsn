@@ -1,6 +1,9 @@
 # NetPP exhibition control wireless sensor network
-NetPP is a simulation of a wireless sensor network which makes use of the IEEE stack recommended for IoT, from bottom to top: wireless IEEE 802.15.4, 6LowPAN, IPv6 with RPL routing, UDP and CoAP. It runs on Z1 motes.
-This project was developed for the Advanced Networks and Wireless Systems exam (Networking++ for friends)
+NetPP is a simulation of a wireless sensor network which makes use of the IEEE stack recommended for IoT, from bottom to top: wireless IEEE 802.15.4, 6LowPAN, IPv6 with RPL routing, UDP and CoAP.
+This project:
+* was developed for the Advanced Networks and Wireless Systems exam (Networking++ for friends)
+* exploits Contiki and Californium
+* runs on Z1 motes
 
 ## Scenario
 NetPP is a company which organizes public events and exhibitions, which installs a sensor (_oracle_) for each stand in order to keep track of people's flow.
